@@ -1,0 +1,17 @@
+{
+    "name": "ipl-social",
+    "version": "1.0.0",
+    "description": "A basic Node.js app for IPL social project",
+    "main": "src/app.js",
+    "scripts": {
+      "test": "jasmine"
+    },
+    "author": "Sacha Paoli",
+    "license": "ISC",
+    "dependencies": {
+      "express": "^4.17.1"
+    },
+    "devDependencies": {
+      "jasmine": "^3.10.0"
+    }
+  }
