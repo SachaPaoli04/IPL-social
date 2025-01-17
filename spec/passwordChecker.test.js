@@ -30,4 +30,13 @@ describe("Password Checker", () => {
   it("should return true if the password contains a digit", () => {
     expect(main.validPasswordDigit("Password1!")).toBe(true);
   });
+
+  it("should return false if the password contains 'IPL' (case insensitive)", () => {
+    expect(main.validPasswordNoIPL("Password1!IPL")).toBe(false);
+    expect(main.validPasswordNoIPL("Password1!ipl")).toBe(false);
+  });
+
+  it("should return true if the password does not contain 'IPL'", () => {
+    expect(main.validPasswordNoIPL("Password1!")).toBe(true);
+  });
 });

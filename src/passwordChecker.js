@@ -20,6 +20,13 @@ class Main {
     return false;
   }
 
+  validPasswordNoIPL(password) {
+    if (password.match(/ipl/i)) {
+      return false;
+    }
+    return true;
+  }
+
 
 }
 
