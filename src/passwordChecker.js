@@ -13,7 +13,12 @@ class Main {
     return false;
   }
 
-  
+  validPasswordDigit(password) {
+    if (password.match(/\d/)) {
+      return true;
+    }
+    return false;
+  }
 
 
 }

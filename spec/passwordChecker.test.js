@@ -23,5 +23,11 @@ describe("Password Checker", () => {
     expect(main.validPasswordSpecialChar("Password1!")).toBe(true);
   });
 
-  
+  it("should return false if the password does not contain a digit", () => {
+    expect(main.validPasswordDigit("Password!")).toBe(false);
+  });
+
+  it("should return true if the password contains a digit", () => {
+    expect(main.validPasswordDigit("Password1!")).toBe(true);
+  });
 });
