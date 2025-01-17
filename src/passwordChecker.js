@@ -1,8 +1,11 @@
-const express = require('express');
-const app = express();
-const port = 3000;
+class Main {
+  validPasswordLength(password) {
+    if (password.length < 8) {
+      return false;
+    }
+    return true;
+  }
+}
 
-app.get('/', (req, res) => {
-  res.send('Hello World!');
-});
+module.exports = Main;
 
