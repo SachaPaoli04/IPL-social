@@ -27,6 +27,18 @@ class Main {
     return true;
   }
 
+  validPassword(password) {
+    if (
+      this.validPasswordLength(password) &&
+      this.validPasswordSpecialChar(password) &&
+      this.validPasswordDigit(password) &&
+      this.validPasswordNoIPL(password)
+    ) {
+      return true;
+    }
+    return false;
+  }
+
 
 }
 

@@ -39,4 +39,16 @@ describe("Password Checker", () => {
   it("should return true if the password does not contain 'IPL'", () => {
     expect(main.validPasswordNoIPL("Password1!")).toBe(true);
   });
+
+  it("should return false if the password does not meet all criteria", () => {
+    expect(main.validPassword("short")).toBe(false); // Too short
+    expect(main.validPassword("longenough")).toBe(false); // No special character, no digit
+    expect(main.validPassword("Password1")).toBe(false); // No special character
+    expect(main.validPassword("Password!")).toBe(false); // No digit
+    expect(main.validPassword("Password1!IPL")).toBe(false); // Contains 'IPL'
+  });
+
+  it("should return true if the password meets all criteria", () => {
+    expect(main.validPassword("Valid1!")).toBe(true);
+  });
 });
